@@ -1,0 +1,56 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  width:100%;
+  height:100vh;
+  color:rgb(101, 104, 113);
+}
+
+/* - PADDING GENERALI */
+.header{
+  width:100%;
+  height:90px;
+  text-align: center;
+  color:white;
+  background-color: lightgreen;
+}
+
+/* STILE GENERALE TESTI */
+h2{
+  color:white;
+  padding: 15px 0;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+h3, .spotify-sections h3> a{
+  color:white;
+  padding: 15px 0;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+h4{
+  padding-bottom: 15px;
+  font-size: .9em;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(101, 104, 113);
+}
+
+p {
+  padding-bottom: 15px;
+  font-size: .9em;
+  font-weight: 600;
+}
