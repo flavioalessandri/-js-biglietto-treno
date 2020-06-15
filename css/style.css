@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color:black;
+  background-color:grey;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   width:100%;
@@ -16,18 +16,56 @@ body{
 
 /* - PADDING GENERALI */
 .header{
+  display: flex;
   width:100%;
   height:90px;
-  text-align: center;
+  align-items: center;
+  justify-content:space-around;
   color:white;
-  background-color: lightgreen;
+  background-color: rgb(147, 5, 5);
 }
+
+.header > img {
+  width:100px;
+  height:auto;
+}
+
+
+.main-container{
+  display: flex;
+  width:100%;
+  height:100vh;
+  align-items: center;
+  justify-content:center;
+  color:white;
+}
+
+
+.train-card{
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  max-height:40%;
+  background-color:rgb(169, 175, 189);
+  align-items: center;
+  border-radius: 15px;
+  justify-content:center;
+  color:white;
+}
+
 
 /* STILE GENERALE TESTI */
 h2, h3{
   color:white;
-  padding: 15px 0;
+  padding-bottom: 15px;
   font-size: 1.7em;
+  font-weight: 700;
+}
+
+h2#ticket-rate{
+  color: rgb(147, 5, 5);
+  padding-bottom: 15px;
+  font-size: 2em;
   font-weight: 700;
 }
 
