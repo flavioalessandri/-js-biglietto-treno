@@ -38,9 +38,9 @@ console.log ("lo sconto del 40% risulta di ", sale40percent , "€");
 if ((userAge < 18) && (userAge !== 0)) {
   finalCost = (kmCost - sale20percent).toFixed(2);
   console.log ("il costo per gli under 18 è di " , finalCost , "€");
-  document.getElementById("ticket-rate").innerHTML= "TARIFFA 'YOUNG'";
-  document.getElementById("cost").innerHTML=  finalCost  + " €";
-  document.getElementById("subtitle").innerHTML= "Hai risparmiato " + sale20percent + " € sulla tariffa base!";
+  document.getElementById("ticketRate").innerHTML= "TARIFFA 'YOUNG'";
+  document.getElementById("ticketCost").innerHTML=  finalCost  + " €";
+  document.getElementById("subtitle").innerHTML= "Hai risparmiato " + sale20percent + "€ sulla tariffa base!";
 
   //se età digitata è superiore a 65 anni applicare sconto del 40%
   //restituire valore di tariffa base per far capire all'utente il risparmio
@@ -49,18 +49,18 @@ if ((userAge < 18) && (userAge !== 0)) {
 } else if ((userAge > 65) && (userAge !== 0)){
   finalCost = (kmCost - sale40percent).toFixed(2);
   console.log ("il costo per gli over 65 è di " , finalCost , "€");
-  document.getElementById("ticket-rate").innerHTML= "TARIFFA 'CONFORTABLE'";
-  document.getElementById("cost").innerHTML=  finalCost  + " €";
-  document.getElementById("subtitle").innerHTML= "Hai risparmiato " + sale40percent + " € sulla tariffa base!";
+  document.getElementById("ticketRate").innerHTML= "TARIFFA 'CONFORTABLE'";
+  document.getElementById("ticketCost").innerHTML=  finalCost  + " €";
+  document.getElementById("subtitle").innerHTML= "Hai risparmiato " + sale40percent + "€ sulla tariffa base!";
 
   //resitutisci valore errato se viene digitato 0 oppure se non viene digitato niente
 
 } else if ((isNaN(userAge) || isNaN(kmTraveled)) || ((userAge === 0) || (kmTraveled === 0)) ) {
-  document.getElementById("ticket-rate").innerHTML= "Non è stato possibile calcolare il costo a causa di valori inseriti errati!";
+  document.getElementById("ticketRate").innerHTML= "Non è stato possibile calcolare il costo a causa di valori inseriti errati!";
 
 //in alternativa restituire valore soltanto costo tariffa base
 
 } else  {
-  document.getElementById("ticket-rate").innerHTML= "TARIFFA BASE";
- document.getElementById("subtitle").innerHTML= "Gentile cliente, al tuo biglietto verrà applicato il costo di " + kmCost + " €";
+  document.getElementById("ticketRate").innerHTML= "TARIFFA BASE";
+ document.getElementById("subtitle").innerHTML= "Gentile cliente, al tuo biglietto verrà applicato il costo di " + kmCost + "€";
 }
