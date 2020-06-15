@@ -15,6 +15,7 @@ body{
 
 /* - PADDING GENERALI */
 .header{
+  position: relative;
   display: flex;
   width:100%;
   height:140px;
@@ -31,65 +32,83 @@ body{
   filter: invert(1);
 }
 
-
 .main-container{
   display: flex;
   width:100%;
   height:100vh;
   align-items: center;
-  justify-content:center;
+  justify-content:space-around;
 }
 
+.main-container::after{
+  content: "";
+  background-image: url("../img/map.png");
+  position:absolute;
+  z-index: -1;
+  width:100%;
+  height:100%;
+  opacity:.5;
+  filter: blur(5px);
+}
 
-.train-card{
-  text-align: center;
+.train-container{
   display: flex;
-  flex-direction: column;
-  max-width: 40%;
-  max-height:40%;
-  padding:40px;
-  align-items: center;
-  border: 1px solid rgb(169, 175, 189);
-  box-shadow: black 2px 2px 8px;
-  border-radius: 12px;
   justify-content:center;
+  align-items: center;
+  width:80%;
+  padding:40px;
+  border: 1px solid rgb(169, 175, 189);
+  box-shadow: #333 1px 1px 12px;
+  border-radius: 3px;
+  text-align: center;
   background-color: rgba(236,236,236,.9);
 }
 
 
-/* STILE GENERALE TESTI */
+.train-card{
+  float: left;
+  padding:40px;
+}
+
+.train-card::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.location-card{
+  float: left;
+  background-image: url("https://www.spagna.info/wp-content/uploads/sites/39/madrid.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width:40%;
+  min-height:300px;
+}
 
 h2{
   color:#333;
-  padding-bottom: 25px;
+  padding: 30px 0;
   font-size: 1.8em;
   font-weight: 700;
 }
 
 h3{
   color:#333;
-  padding-bottom: 15px;
+  padding: 30px 0;
   font-size: 1.7em;
   font-weight: 700;
 }
 
 h3#ticketRate{
   color: rgb(147, 5, 5);
-  padding-bottom: 15px;
+  padding: 30px 0;
   font-size: 2em;
   font-weight: 700;
 }
 
 h3#ticketCost{
   color: rgb(147, 5, 5);
-  padding-bottom: 15px;
+  padding: 30px 0;
   font-size: 3em;
   font-weight: 700;
-}
-
-
-p {
-  padding-bottom: 15px;
-  font-size: .9em;
-  font-weight: 600;
 }

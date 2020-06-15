@@ -62,5 +62,6 @@ if ((userAge < 18) && (userAge !== 0)) {
 
 } else  {
   document.getElementById("ticketRate").innerHTML= "TARIFFA BASE";
- document.getElementById("subtitle").innerHTML= "Gentile cliente, al tuo biglietto verrà applicato il costo di " + kmCost + "€";
+  document.getElementById("ticketCost").innerHTML= kmCost  + " €";
+  document.getElementById("subtitle").innerHTML= "Questo il prezzo del tuo biglietto!";
 }
